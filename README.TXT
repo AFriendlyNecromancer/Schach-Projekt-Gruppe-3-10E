@@ -10,5 +10,5 @@ PROJEKTBEZEICHNUNG:
 PROJEKTZWECK: Informatik Projekt 10E
 VERSION oder DATUM:
 WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN): Felix Schneider, Mario Betz Nicolas von Homeyer, Benedikt Ostertag
+AUTOR(EN): Felix Schneider, Mario Betz, Nicolas von Homeyer, Benedikt Ostertag
 BENUTZERHINWEISE:

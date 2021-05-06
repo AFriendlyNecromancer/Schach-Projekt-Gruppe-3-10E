@@ -7,8 +7,8 @@ zumindest die folgenden Angaben umfassen:
 ------------------------------------------------------------------------
 
 PROJEKTBEZEICHNUNG:
-PROJEKTZWECK:
+PROJEKTZWECK: Informatik Projekt 10E
 VERSION oder DATUM:
 WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN):
+AUTOR(EN): Felix Schneider, Mario Betz Nicolas von Homeyer, Benedikt Ostertag
 BENUTZERHINWEISE:

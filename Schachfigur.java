@@ -1,14 +1,34 @@
 
+Achtung code ist unvollständig!!!
 /**
  * Write a description of class Schachfigur here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Schachfigur
+
+abstract class Schachfigur
 {
     // instance variables - replace the example below with your own
-    private int x;
+    protected int x; //Spalte 0...7
+    protected int y; // Zeile 0...7
+    protected bool IstWeiß;
+    //Annahme: xZiel und yZiel sind zwischen 0 und 7
+    //Annahme: Zielpunkt != Startpunkt
+    //Annahme: Niemand steht im Weg
+    //Rückgabe: ist der zug erlaubt
+    public abstract bool BewegeNach(int xZiel, int yZiel);
+}   
+    
+    class Turm extends Schachfigur
+    {
+        public override bool BewegeNach(int xZiel, int yZiel);
+        {
+            return xZiel == x || yZiel == y;
+        }    
+        
+    }        
+        
 
     /**
      * Constructor for objects of class Schachfigur

@@ -20,6 +20,4 @@ public abstract class Schachfigur
         this.istWeiß = istWeiß;
         this.form = form;
     }
-    }
-  
 }

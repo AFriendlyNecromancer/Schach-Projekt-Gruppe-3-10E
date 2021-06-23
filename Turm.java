@@ -2,7 +2,6 @@ public class Turm extends Schachfigur
 {
     public Turm(int x, int y, boolean istWeiß)
     {
-        
         if(istWeiß)
         {
             form = '♖';
@@ -28,4 +27,3 @@ public class Turm extends Schachfigur
    
         
     }
-

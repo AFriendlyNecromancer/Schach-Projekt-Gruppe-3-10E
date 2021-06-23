@@ -7,6 +7,6 @@ public class KÖNIG extends Schachfigur
         Kx = x;
         Ky = y;
         König = new KÖNIG();
-        
+
     }
 }

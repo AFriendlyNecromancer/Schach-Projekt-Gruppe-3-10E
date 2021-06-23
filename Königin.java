@@ -1,7 +1,6 @@
 import java.awt.*;
 import javax. swing. *;
-
-public class Bauer
+public class Königin
 {
     /** Das Anzeigefenster. */
     private JFrame fenster;
@@ -19,7 +18,7 @@ public class Bauer
      * Er erzeugt ein scharzes Rechteck in der linken oberen Ecke des Fensters.
      * Das Fenster wird bei Bedarf angelegt.
      */
-    Bauer()
+    Königin()
     {
         fenster = Schachbrett. FensterGeben ();
         anzeige = new JComponent () {

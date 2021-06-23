@@ -27,7 +27,7 @@ public class Bauer
             public void paintComponent (Graphics g)
             {
                 g. clearRect (0, 0, groesse, groesse);
-                g. setColor (Color. white);
+                g. setColor (Color. black);
                 g. fillRect (0, 0, groesse - 1, groesse - 1);
                 g. setColor (new Color (255, 0, 0));
                 g. drawRect (0, 0, groesse - 1, groesse - 1);

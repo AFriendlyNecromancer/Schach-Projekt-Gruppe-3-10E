@@ -13,12 +13,12 @@ class Schachbrett
     /** Anzeigegröße für eine Rasterkachel */
     private static final int rasterGroesse = 40;
     /** Höhe des Anzeigefensters */
-    private static final int hoeheFenster = rasterGroesse * 8;
+    private static final int hoeheFenster = rasterGroesse * 10;
     /** Breite des Anzeigefensters */
-    private static final int breiteFenster = rasterGroesse * 8;
+    private static final int breiteFenster = rasterGroesse * 10;
     private static Schachbrett o = null;
     private JFrame fenster = null;
-
+    Bauer [] bauer;
     /**
      * Baut die Bedienoberfläche auf
      */

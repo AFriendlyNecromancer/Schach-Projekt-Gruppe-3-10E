@@ -16,7 +16,7 @@ class Schachfiguren
         turm = new Turm ();
         springer = new Springer();
         laeufer = new Laeufer();
-         
+        
         for (int i = 0; i < bauer. length; i++)
         {
             bauer [i] = new Bauer ();

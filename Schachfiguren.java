@@ -16,7 +16,7 @@ class Schachfiguren
         turm = new Turm ();
         springer = new Springer();
         laeufer = new Laeufer();
-        
+         
         for (int i = 0; i < bauer. length; i++)
         {
             bauer [i] = new Bauer ();
@@ -25,6 +25,9 @@ class Schachfiguren
         {
             bauer [i]. PositionSetzen (x + (bauer. length - i), y);
         }
-        
+    }   
+    void FigurenSetzen(int x, int y)
+    {
+       
     }
 }

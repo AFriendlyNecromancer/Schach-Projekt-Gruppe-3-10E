@@ -87,4 +87,8 @@ public class Bauer
         (Schachbrett. FensterGeben ()). remove (anzeige);
         (Schachbrett. FensterGeben ()). repaint();
     }
+    public void BauerBewegen (int x, int y)
+    {
+    }
+    //need to add the select with mouse method for this one to work
 }

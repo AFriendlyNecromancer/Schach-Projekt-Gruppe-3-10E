@@ -1,5 +1,5 @@
 public class Spiel
-{
+{ ihr seid penise
     public void Reset ()
     {
        

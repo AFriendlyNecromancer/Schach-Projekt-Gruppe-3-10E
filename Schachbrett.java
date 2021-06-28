@@ -1,4 +1,4 @@
-
+import java. awt. event. *;
 import java. awt. *;
 import javax. swing. *;
 
@@ -8,7 +8,7 @@ import javax. swing. *;
  * @author Albert Wiedemann
  * @version 1.0
  */
-class Schachbrett
+class Schachbrett 
 {
     /** Anzeigegröße für eine Rasterkachel */
     private static final int rasterGroesse = 40;
@@ -22,7 +22,7 @@ class Schachbrett
     /**
      * Baut die Bedienoberfläche auf
      */
-    private Schachbrett ()
+    public Schachbrett ()
     {
         fenster = new JFrame ("Zeichenfläche");
         fenster. setResizable (false);

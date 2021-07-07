@@ -1,8 +1,8 @@
 
-class Schachfiguren
+public class Schachfiguren
 {
-    void FigurenSetzen(int x, int y)
-    {
-       
+   void Bewegen(int x, int y)
+   {
+    
     }
 }

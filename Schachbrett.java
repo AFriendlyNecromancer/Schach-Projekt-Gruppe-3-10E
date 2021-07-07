@@ -11,26 +11,26 @@ import javax. swing. *;
 class Schachbrett 
 {
     /** Anzeigegröße für eine Rasterkachel */
-    private static final int rasterGroesse = 40;
+    public static final int rasterGroesse = 80;
     /** Höhe des Anzeigefensters */
-    private static final int hoeheFenster = rasterGroesse * 10;
+    public static final int hoeheFenster = rasterGroesse * 10;
     /** Breite des Anzeigefensters */
-    private static final int breiteFenster = rasterGroesse * 10;
-    private static Schachbrett o = null;
-    private JFrame fenster = null;
-    Bauer [] bauer;
+    public static final int breiteFenster = rasterGroesse * 10;
+    public static Schachbrett o = null;
+    public JFrame  Schachfiguren = null;
+    Schachfiguren [] schachfiguren;
     /**
      * Baut die Bedienoberfläche auf
      */
     public Schachbrett ()
     {
-        fenster = new JFrame ("Zeichenfläche");
-        fenster. setResizable (false);
-        fenster. setVisible (true);
-        fenster. setLayout (null);
-        fenster. getContentPane (). setBackground (new Color (240, 240, 240));
-        Insets i = fenster.getInsets();
-        fenster. setSize (breiteFenster, hoeheFenster + i.top);         // Ausgleich für Fenstertitel
+        Schachfiguren = new JFrame() ;
+        Schachfiguren. setResizable (false);
+        Schachfiguren. setVisible (true);
+        Schachfiguren. setLayout (null);
+        Schachfiguren. getContentPane (). setBackground (new Color (240, 240, 240));
+        Insets i = Schachfiguren.getInsets();
+        Schachfiguren. setSize (breiteFenster, hoeheFenster + i.top);         // Ausgleich für Fenstertitel
         JComponent hintergrund = new JComponent ()
         {
              /**
@@ -57,7 +57,7 @@ class Schachbrett
         hintergrund. setVisible (true);
         hintergrund. setSize (breiteFenster, hoeheFenster);
         hintergrund. setLocation (0, 0);
-        fenster. add (hintergrund);
+        Schachfiguren. add (hintergrund);
     }
 
     /**
@@ -70,7 +70,7 @@ class Schachbrett
         {
             o = new Schachbrett ();
         }
-        return o. fenster;
+        return o. Schachfiguren;
     }
 
     /**

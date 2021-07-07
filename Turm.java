@@ -2,27 +2,19 @@ import java.awt.*;
 import javax. swing. *;
 public class Turm
 {
-    /** Das Anzeigefenster. */
     private JFrame fenster;
-    
-    /** Anzeigegröße für das Rumpfelement */
+
     private static final int groesse = Schachbrett. RasterGroesseGeben ();
 
-    /** Interna */
     public int x;
     public int y;
     private JComponent anzeige;
 
-    /**
-     * Standardkonstruktor für Objekte der Klasse KASSENSYMBOL.
-     * Er erzeugt ein scharzes Rechteck in der linken oberen Ecke des Fensters.
-     * Das Fenster wird bei Bedarf angelegt.
-     */
     Turm()
     {
         fenster = Schachbrett. FensterGeben ();
         anzeige = new JComponent () {
-            // Stellt das Rumpfelement auf dem Fenster dar.
+            // Stellt die Figur auf dem Fenster dar.
             public void paintComponent (Graphics g)
             {
                 g. clearRect (0, 0, groesse, groesse);
@@ -46,13 +38,6 @@ public class Turm
         PositionSetzen (0, 0);
     }
 
-    /**
-     * Setzt die Position des Rumpfelements. Der Ursprung liegt in der Mitte des
-     * Fensters, die y-Achse zeigt nach unten. (x /y) bedeutet das
-     * K&auml;stchen rechts unterhalb der Gitterlinien.
-     * @param x x-Position
-     * @param y y-Position
-     */
     public void PositionSetzen (int x, int y)
     {
         this. x = x;
@@ -60,27 +45,16 @@ public class Turm
         anzeige. setLocation (Schachbrett. FensterBreiteGeben () / 2 + x * groesse, Schachbrett. FensterHoeheGeben () / 2 + y * groesse);
     }
 
-    /**
-     * Gibt den X-Wert der Position des Kopfelements.
-     * @return x-Position
-     */
     int XPositionGeben ()
     {
         return x;
     }
 
-    /**
-     * Gibt den Y-Wert der Position des Kopfelements.
-     * @return y-Position
-     */
     int YPositionGeben ()
     {
         return y;
     }
 
-    /**
-     * Entfernt die Figur aus der Anzeige
-     */
     public void Entfernen ()
     {
         (Schachbrett. FensterGeben ()). remove (anzeige);
@@ -89,27 +63,19 @@ public class Turm
 }
 class Turmb
 {
-    /** Das Anzeigefenster. */
     private JFrame fenster;
-    
-    /** Anzeigegröße für das Rumpfelement */
+
     private static final int groesse = Schachbrett. RasterGroesseGeben ();
 
-    /** Interna */
     public int x;
     public int y;
     private JComponent anzeige;
 
-    /**
-     * Standardkonstruktor für Objekte der Klasse KASSENSYMBOL.
-     * Er erzeugt ein scharzes Rechteck in der linken oberen Ecke des Fensters.
-     * Das Fenster wird bei Bedarf angelegt.
-     */
     Turmb()
     {
         fenster = Schachbrett. FensterGeben ();
         anzeige = new JComponent () {
-            // Stellt das Rumpfelement auf dem Fenster dar.
+            // Stellt die Figur auf dem Fenster dar.
             public void paintComponent (Graphics g)
             {
                 g. clearRect (0, 0, groesse, groesse);
@@ -133,13 +99,6 @@ class Turmb
         PositionSetzen (0, 0);
     }
 
-    /**
-     * Setzt die Position des Rumpfelements. Der Ursprung liegt in der Mitte des
-     * Fensters, die y-Achse zeigt nach unten. (x /y) bedeutet das
-     * K&auml;stchen rechts unterhalb der Gitterlinien.
-     * @param x x-Position
-     * @param y y-Position
-     */
     public void PositionSetzen (int x, int y)
     {
         this. x = x;
@@ -147,27 +106,16 @@ class Turmb
         anzeige. setLocation (Schachbrett. FensterBreiteGeben () / 2 + x * groesse, Schachbrett. FensterHoeheGeben () / 2 + y * groesse);
     }
 
-    /**
-     * Gibt den X-Wert der Position des Kopfelements.
-     * @return x-Position
-     */
     int XPositionGeben ()
     {
         return x;
     }
 
-    /**
-     * Gibt den Y-Wert der Position des Kopfelements.
-     * @return y-Position
-     */
     int YPositionGeben ()
     {
         return y;
     }
 
-    /**
-     * Entfernt die Figur aus der Anzeige
-     */
     public void Entfernen ()
     {
         (Schachbrett. FensterGeben ()). remove (anzeige);

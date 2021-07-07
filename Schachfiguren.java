@@ -1,8 +1,6 @@
 
-public class Schachfiguren
+public abstract class Schachfiguren
 {
-   void Bewegen(int x, int y)
-   {
-    
-    }
+    int xJetzt;
+    int yJetzt;
 }

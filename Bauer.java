@@ -3,27 +3,24 @@ import javax. swing. *;
 
 public class Bauer
 {
-    /** Das Anzeigefenster. */
     private JFrame fenster;
     
-    /** Anzeigegröße für das Rumpfelement */
     private static final int groesse = Schachbrett. RasterGroesseGeben ();
 
-    /** Interna */
-    private int x;
-    private int y;
     private JComponent anzeige;
-
-    /**
-     * Standardkonstruktor für Objekte der Klasse KASSENSYMBOL.
-     * Er erzeugt ein scharzes Rechteck in der linken oberen Ecke des Fensters.
-     * Das Fenster wird bei Bedarf angelegt.
-     */
+    
+    int x, xAnfang;
+    int y, yAnfang;
+    int xJetzt = XPositionGeben ();
+    int yJetzt = YPositionGeben ();
     Bauer()
     {
+        yAnfang = 1;
+        xAnfang = 2;
+        
         fenster = Schachbrett. FensterGeben ();
         anzeige = new JComponent () {
-            // Stellt das Rumpfelement auf dem Fenster dar.
+            // Stellt die Figur auf dem Fenster dar.
             public void paintComponent (Graphics g)
             {
                 g. clearRect (0, 0, groesse, groesse);
@@ -46,14 +43,7 @@ public class Bauer
         fenster. add (anzeige, 0);
         PositionSetzen (0, 0);
     }
-    
-    /**
-     * Setzt die Position des Rumpfelements. Der Ursprung liegt in der Mitte des
-     * Fensters, die y-Achse zeigt nach unten. (x /y) bedeutet das
-     * K&auml;stchen rechts unterhalb der Gitterlinien.
-     * @param x x-Position
-     * @param y y-Position
-     */
+     
     public void PositionSetzen (int x, int y)
     {
         this. x = x;
@@ -61,60 +51,60 @@ public class Bauer
         anzeige. setLocation (Schachbrett. FensterBreiteGeben () / 2 + x * groesse, Schachbrett. FensterHoeheGeben () / 2 + y * groesse);
     }
 
-    /**
-     * Gibt den X-Wert der Position des Kopfelements.
-     * @return x-Position
-     */
-    int XPositionGeben ()
-    {
-        return x;
-    }
-
-    /**
-     * Gibt den Y-Wert der Position des Kopfelements.
-     * @return y-Position
-     */
-    int YPositionGeben ()
-    {
-        return y;
-    }
-    /**
-     * Entfernt die Figur aus der Anzeige
-     */
     public void Entfernen ()
     {
         (Schachbrett. FensterGeben ()). remove (anzeige);
         (Schachbrett. FensterGeben ()). repaint();
     }
-    public void Bewegen (int x, int y)
+    
+    int XPositionGeben ()
     {
-        
+        return x;
     }
-    //need to add the select with mouse method for this one to work
-}
+
+    int YPositionGeben ()
+    {
+        return y;
+    }
+    
+    public void CheckBauer (int x, int y)
+    {
+        if (xJetzt == xAnfang && yJetzt == yAnfang)
+        {
+            BauerBewegen1();
+        }
+        else
+        {
+            BauerBewegen2();
+        }
+    }
+    
+    void BauerBewegen1()
+    {
+        //Hier wird bestimmt das der Bauer sich 1 bzw. 2 felder nach vorne bewegen kann
+    }
+
+    void BauerBewegen2()
+    {
+        //Im Falle das die jetzige Position des Bauers nicht der anfänglichen entspricht
+        //wird diese Methode aufgerufen --> Der Bauer kann sich ein Feld nach vorne bewegen
+    }    
+
 class Bauerb
 {
-    /** Das Anzeigefenster. */
     private JFrame fenster;
-    
-    /** Anzeigegröße für das Rumpfelement */
-    private static final int groesse = Schachbrett. RasterGroesseGeben ();
 
-    /** Interna */
+    private final int groesse = Schachbrett. RasterGroesseGeben ();
+    
     private int x;
     private int y;
+    
     private JComponent anzeige;
-
-    /**
-     * Standardkonstruktor für Objekte der Klasse KASSENSYMBOL.
-     * Er erzeugt ein scharzes Rechteck in der linken oberen Ecke des Fensters.
-     * Das Fenster wird bei Bedarf angelegt.
-     */
     Bauerb()
     {
         fenster = Schachbrett. FensterGeben ();
         anzeige = new JComponent () {
-            // Stellt das Rumpfelement auf dem Fenster dar.
+            // Stellt die Figur auf dem Fenster dar.
             public void paintComponent (Graphics g)
             {
                 g. clearRect (0, 0, groesse, groesse);
@@ -138,13 +128,6 @@ class Bauerb
         PositionSetzen (0, 0);
     }
     
-    /**
-     * Setzt die Position des Rumpfelements. Der Ursprung liegt in der Mitte des
-     * Fensters, die y-Achse zeigt nach unten. (x /y) bedeutet das
-     * K&auml;stchen rechts unterhalb der Gitterlinien.
-     * @param x x-Position
-     * @param y y-Position
-     */
     public void PositionSetzen (int x, int y)
     {
         this. x = x;
@@ -152,34 +135,25 @@ class Bauerb
         anzeige. setLocation (Schachbrett. FensterBreiteGeben () / 2 + x * groesse, Schachbrett. FensterHoeheGeben () / 2 + y * groesse);
     }
 
-    /**
-     * Gibt den X-Wert der Position des Kopfelements.
-     * @return x-Position
-     */
     int XPositionGeben ()
     {
         return x;
     }
 
-    /**
-     * Gibt den Y-Wert der Position des Kopfelements.
-     * @return y-Position
-     */
     int YPositionGeben ()
     {
         return y;
     }
 
-    /**
-     * Entfernt die Figur aus der Anzeige
-     */
     public void Entfernen ()
     {
         (Schachbrett. FensterGeben ()). remove (anzeige);
         (Schachbrett. FensterGeben ()). repaint();
     }
+    
     public void BauerBewegen (int x, int y)
     {
+        
     }
-    //need to add the select with mouse method for this one to work
+  }
 }

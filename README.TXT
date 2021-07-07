@@ -8,7 +8,7 @@ zumindest die folgenden Angaben umfassen:
 
 PROJEKTBEZEICHNUNG:
 PROJEKTZWECK: Informatik Projekt 10E
-VERSION oder DATUM: Last Updated 24.06.21
+VERSION oder DATUM: Last Updated 07.07.21
 WIE IST DAS PROJEKT ZU STARTEN:
 AUTOR(EN): Felix Schneider, Mario Betz, Nicolas von Homeyer, Benedikt Ostertag
 BENUTZERHINWEISE:

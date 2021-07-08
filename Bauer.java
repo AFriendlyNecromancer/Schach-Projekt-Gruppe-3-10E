@@ -89,7 +89,7 @@ public class Bauer
         //Im Falle das die jetzige Position des Bauers nicht der anfänglichen entspricht
         //wird diese Methode aufgerufen --> Der Bauer kann sich ein Feld nach vorne bewegen
     }    
-
+}
 class Bauerb
 {
     private JFrame fenster;
@@ -156,4 +156,3 @@ class Bauerb
         
     }
   }
-}

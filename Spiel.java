@@ -4,7 +4,7 @@ import java.awt.event.*;
 import javax. swing. *;
 public class Spiel
 {
-  Turmb [] turmb;
+  Turmb [] turmb; 
   Dameb [] dameb;
   Laeuferb [] laeuferb;
   Springerb [] springerb;
